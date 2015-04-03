@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYk-m8-EDl">
+                                <rect key="frame" x="16" y="52" width="568" height="569"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qYO-16-PS8">
+                                <rect key="frame" x="16" y="20" width="521" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yoz-Mx-8fH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmO-fW-5tq">
+                                <rect key="frame" x="538" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="MN7-s2-iO4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="41"/>
+                                <state key="normal" title="✓"/>
+                                <connections>
+                                    <action selector="urlButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZF-vw-HIg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WmO-fW-5tq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="27A-cZ-jkM"/>
+                            <constraint firstItem="WmO-fW-5tq" firstAttribute="leading" secondItem="qYO-16-PS8" secondAttribute="trailing" constant="1" id="2X6-Ud-RjY"/>
+                            <constraint firstItem="qYO-16-PS8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4Pm-7H-9QL"/>
+                            <constraint firstItem="zYk-m8-EDl" firstAttribute="trailing" secondItem="WmO-fW-5tq" secondAttribute="trailing" id="5HE-Kf-qkl"/>
+                            <constraint firstItem="qYO-16-PS8" firstAttribute="bottom" secondItem="WmO-fW-5tq" secondAttribute="bottom" id="AUE-EY-mUm"/>
+                            <constraint firstItem="WmO-fW-5tq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cg7-v5-OTy"/>
+                            <constraint firstItem="zYk-m8-EDl" firstAttribute="top" secondItem="WmO-fW-5tq" secondAttribute="bottom" constant="2" id="Qzv-Vx-2df"/>
+                            <constraint firstItem="WmO-fW-5tq" firstAttribute="leading" secondItem="qYO-16-PS8" secondAttribute="trailing" constant="1" id="Wf7-42-8SN"/>
+                            <constraint firstItem="qYO-16-PS8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YB5-DY-rUG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zYk-m8-EDl" secondAttribute="bottom" constant="-21" id="fT2-1r-JzS"/>
+                            <constraint firstItem="qYO-16-PS8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="klv-qB-Tl6"/>
+                            <constraint firstItem="qYO-16-PS8" firstAttribute="top" secondItem="WmO-fW-5tq" secondAttribute="top" id="l1h-BH-mFW"/>
+                            <constraint firstItem="zYk-m8-EDl" firstAttribute="leading" secondItem="qYO-16-PS8" secondAttribute="leading" id="qiu-Uv-vH2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="klv-qB-Tl6"/>
+                                <exclude reference="27A-cZ-jkM"/>
+                                <exclude reference="2X6-Ud-RjY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="inputBar" destination="qYO-16-PS8" id="69j-fL-M2O"/>
+                        <outlet property="uiWebView" destination="zYk-m8-EDl" id="AVS-Bh-wsk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137"/>
+        </scene>
+    </scenes>
+</document>
