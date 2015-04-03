@@ -1,0 +1,49 @@
+Info bewaren iOS //19 maart 2015
+
+•	Userdefaults. Een soort playerPrefs (key / value)
+Niet echt bedoeld voor wachtwoorden. Keychain wel. 
+
+gebruik: NSUserDefaults.standardUserDefaults().setValue(value, forKey: key)
+
+Uit een getvalue komt een anyObject. want het kan van alles zijn.
+omzetten naar een string als het kan (as? String)
+
+Denk aan bijvoorbeeld een nog niet uit getypt bericht bewaren. Klein gebruiks gemak
+
+•	Plist
+Een soort temp. Bewaarplaats wanneer er bijvoorbeeld geen verbinding is met de backend.
+
+•	Database
+Snel vinden van een bepaald element. Zijn goed in grote hoeveelheden gegevens.
+Zit standaard SQlite in iOS. moet je een Query uitvoeren. CoreData is een iOS laag over SQLite database heen.
+Core data is heel omslachtig
+magical record. Een community oplossing voor core data.
+verder nog realm (url: realm.io), nanoStore
+
+
+•	Asynhroon
+Delegate/ protocol oplossing
+Noticiation centers
+Blocks
+
+
+//Network api's
+AFNetworking oud. AlamoFireNetworking een library for networking
+ondersteuning JSON, XML
+Weinig code nodig voor simpele dingen
+
+// as is niet bedoeld om een waarde om te zetten. Het is een middel om de originele type weer naar boven te halen.
+
+
+
+pods bridging header gebruiken voor het gebruik maken van framework pods die gebruik maken van obj-C ofzo. Dus niet swift. Dit maak je bijvoorbeeld aan bij het maken van een C++ file in Xcode. Hij vraagt dan voor het aanmaken van een bridging header. Hierna gooi je gewoon het C++ bestand weg.
+
+Backends zijn vaak RESTful
+
+
+
+//consult Raymond
+
+-Wat is een notificatie?
+-Wat betekend het voor de gebruiker
+-Heatmap waar kan je duim komen. meenemen in het ontwerp. mobile first.
